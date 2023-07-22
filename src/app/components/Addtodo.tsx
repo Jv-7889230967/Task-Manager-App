@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { AiOutlinePlus, AiFillEdit, AiFillDelete } from 'react-icons/ai';
 import { todoobject } from '../Models/todoobject';
-import { v4 as uuid } from 'uuid';
+import {v4 as uuid } from 'uuid';
 
 const AddTodo: React.FC = () => {
   const [title, setTitle] = useState<string>('');
@@ -10,7 +10,6 @@ const AddTodo: React.FC = () => {
   const [status, setStatus] = useState<boolean>(false);
   const [todos, setTodos] = useState<todoobject[]>([]);
   const [selectedTodo, setSelectedTodo] = useState<todoobject | null>(null);
-
   const addTodo = () => {
     const newTodo: todoobject = { id: uuid(), title, descrp, status };
     setTodos([newTodo, ...todos]);

@@ -50,20 +50,20 @@ const AddTodo: React.FC = () => {
         <input
           type="text"
           placeholder="Add Title"
-          className="p-2 rounded mr-5 text-slate-900"
+          className="p-2 rounded mr-5 text-slate-100"
           onChange={e => setTitle(e.target.value)}
           value={title}
         />
         <input
           type="text"
           placeholder="Add Description"
-          className="p-2 rounded mr-5 text-slate-900"
+          className="p-2 rounded mr-5 text-slate-100"
           onChange={e => setDescrp(e.target.value)}
           value={descrp}
         />
         {!selectedTodo ? (
           <button
-            className={`btn btn-primary ${title ? '' : 'disabled'}`}
+            className={`btn mb-3 w-36  ${title ? '' : 'disabled'}`}
             onClick={addTodo}
             disabled={!title}
           >
@@ -71,7 +71,7 @@ const AddTodo: React.FC = () => {
           </button>
         ) : (
           <button
-            className={`btn btn-primary ${title ? '' : 'disabled'}`}
+            className={`btn mb-3 ${title ? '' : 'disabled'}`}
             onClick={() => updateTodo(selectedTodo.id)}
             disabled={!title}
           >

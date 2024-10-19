@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@layer components{
+    input{
+        @apply h-[50px] w-[350px] px-[10px] rounded-[7px] bg-inherit text-slate-700 border-[1px] border-solid border-black;
+    }
+}
